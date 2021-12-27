@@ -46,7 +46,23 @@ data class User(
 }
 
 fun main() {
-    val users: List<User> = listOf(/* TODO: create several users*/)
+    val user1 = User("Александр", "Точилин", 21, mutableListOf(
+        Contact.PhoneNumber("+79213425612", PhoneType.PERSONAL),
+        Contact.Email("TochilinA@mail.ru"),
+        Contact.Messenger("374127213", MessengerType.TELEGRAM)
+    ))
+    val user2 = User("Валерий", "Кузнецов", 23, mutableListOf(
+        Contact.PhoneNumber("+79511628735", PhoneType.WORK),
+        Contact.Email("Valera1998@bk.ru"),
+        Contact.Messenger("111333222", MessengerType.WHATSAPP)
+    ))
+    val user3 = User("Даниил", "Квят", 27, mutableListOf(
+        Contact.PhoneNumber("4761631", PhoneType.HOME),
+        Contact.Email("Kvyat@gmail.com"),
+        Contact.Messenger("12312", MessengerType.VIBER),
+        Contact.Messenger("9784351", MessengerType.TELEGRAM)
+    ))
+    val users: List<User> = listOf(user1, user2, user3)
 
     println(users)
 }
